@@ -8,8 +8,6 @@ platform: x64
 
 install:
 
-python -m pip install --upgrade pip
-
 - ps: >-
     $vsixPath = "$($env:USERPROFILE)\BoostUnitTestAdapter.vsix"
 
@@ -36,7 +34,7 @@ build:
 test_script:
 
 - ps: >-
-
+    python -m pip install --upgrade pip
     $testconsole = "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\"
 
     $testexe = "C:\projects\boostunittest2\x64\Debug\BoostUnitTest2.exe"
