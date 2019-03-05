@@ -8,6 +8,8 @@ platform: x64
 
 install:
 
+python -m pip install --upgrade pip
+
 - ps: >-
     $vsixPath = "$($env:USERPROFILE)\BoostUnitTestAdapter.vsix"
 
